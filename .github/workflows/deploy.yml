@@ -55,7 +55,7 @@ jobs:
           # Login to get JWT
           TOKEN=$(curl -s -X POST "$CAPROVER_URL/api/v2/login" \
             -H "Content-Type: application/json" \
-            -d "{\"password\":\"$CAPROVER_PASSWORD\"}" \
+            -d "$(jq -n --arg pw "$CAPROVER_PASSWORD" '{password: $pw}')" \
             | jq -r '.data.token')
 
           # Update env vars using JWT
