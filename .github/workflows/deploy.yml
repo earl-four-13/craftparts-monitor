@@ -17,15 +17,15 @@ jobs:
           export-env: true
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
-          CAPROVER_SERVER: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/caprover-server
-          CAPROVER_APP: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/caprover-app
-          CAPROVER_TOKEN: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/caprover-token
-          DATABASE_URL: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/database-url
-          BETTER_AUTH_SECRET: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/better-auth-secret
-          BETTER_AUTH_URL: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/better-auth-url
-          SUPERADMIN_EMAIL: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/superadmin-email
-          SUPERADMIN_PASSWORD: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/superadmin-password
-          CRON_SECRET: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/cron-secret
+          CAPROVER_SERVER: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/CAPROVER-SERVER
+          CAPROVER_APP: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/CAPROVER-APP
+          CAPROVER_TOKEN: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/CAPROVER-TOKEN
+          DATABASE_URL: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/DATABASE_URL
+          BETTER_AUTH_SECRET: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/BETTER_AUTH_SECRET
+          BETTER_AUTH_URL: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/BETTER_AUTH_URL
+          SUPERADMIN_EMAIL: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/SUPERADMIN_EMAIL
+          SUPERADMIN_PASSWORD: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/SUPERADMIN_PASSWORD
+          CRON_SECRET: op://gtify7esp5ovvvzyekun4zxgya/craftparts-monitor-dev/CRON_SECRET
 
       - name: Update CapRover env vars
         run: |
