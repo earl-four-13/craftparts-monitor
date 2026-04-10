@@ -46,8 +46,11 @@ jobs:
             }'
 
       - name: Deploy to CapRover
-        uses: caprover/deploy-from-github@v1.1.2
-        with:
-          server: ${{ env.CAPROVER_SERVER }}
-          app: ${{ env.CAPROVER_APP }}
-          token: ${{ env.CAPROVER_TOKEN }}
+        run: |
+          npm install -g caprover
+          tar -czf /tmp/deploy.tar.gz --exclude='.git' --exclude='node_modules' .
+          caprover deploy \
+            --caproverUrl "$CAPROVER_SERVER" \
+            --appToken "$CAPROVER_TOKEN" \
+            --appName "$CAPROVER_APP" \
+            --tarFile /tmp/deploy.tar.gz
